@@ -33,3 +33,9 @@ SELECT player
 FROM goal JOIN game
 ON goal.matchid = game.id
 WHERE game.stadium = 'National Stadium, Warsaw';
+
+
+SELECT DISTINCT player
+FROM goal JOIN game
+ON goal.matchid = game.id
+WHERE 'GER' IN (team1, team2) AND teamid <> 'GER';
