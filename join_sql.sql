@@ -39,3 +39,14 @@ SELECT DISTINCT player
 FROM goal JOIN game
 ON goal.matchid = game.id
 WHERE 'GER' IN (team1, team2) AND teamid <> 'GER';
+
+SELECT teamname, COUNT(player)
+FROM eteam JOIN goal
+ON eteam.id = goal.teamid
+GROUP BY teamname;
+
+
+SELECT stadium, COUNT(player)
+FROM game JOIN goal
+ON game.id = goal.matchid
+GROUP BY stadium;
