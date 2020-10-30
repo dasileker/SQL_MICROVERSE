@@ -50,3 +50,16 @@ SELECT stadium, COUNT(player)
 FROM game JOIN goal
 ON game.id = goal.matchid
 GROUP BY stadium;
+
+
+SELECT matchid, mdate, COUNT(player) AS goals_scored
+FROM game JOIN goal
+ON game.id = goal.matchid
+WHERE 'POL' IN (team1, team2)
+GROUP BY matchid, mdate;
+
+SELECT matchid, mdate, COUNT(player)
+FROM game JOIN goal
+ON game.id = goal.matchid
+WHERE goal.teamid = 'GER'
+GROUP BY matchid, mdate;
