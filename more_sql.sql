@@ -17,4 +17,9 @@ FROM serie
 WHERE title LIKE '%Person Of Interest%'
 ORDER BY yr;
 
+-- what id number the actor have 'Jim Caviezel'
+
+SELECT id
+FROM actor
+WHERE name = 'Jim Caviezel';
 
