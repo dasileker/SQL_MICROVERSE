@@ -23,7 +23,16 @@ SELECT id
 FROM actor
 WHERE name = 'Liam Neeson';
 
+
+-- fetching the id of the movie 
+
 SELECT id 
 FROM sierie
 WHERE title = 'The A-Team';
+
+-- fetching the list name of actors using the idnum of the movie
+SELECT name
+FROM actor JOIN casting
+ON actor.id = casting.actorid
+WHERE movieid = 18188;
 
